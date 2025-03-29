@@ -1,3 +1,5 @@
+package class_vs_interface;
+
 /**
  */
 public class CreditCardProcessor implements PaymentProcessor {

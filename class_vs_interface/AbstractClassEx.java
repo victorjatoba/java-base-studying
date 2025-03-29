@@ -4,6 +4,8 @@ import java.util.Date;
 
 interface Employee {
     int salary();
+
+    abstract String getCorporativeEmail();
 }
 
 abstract class Person {
@@ -43,6 +45,11 @@ class Manager extends Person implements Employee {
     public int salary() {
         return 0;
     }
+
+    @Override
+    public String getCorporativeEmail() {
+        return "manager@bla.com";
+    }
 }
 
 class SoftwareEngineer extends Person implements Employee {
@@ -58,6 +65,11 @@ class SoftwareEngineer extends Person implements Employee {
     @Override
     public int salary() {
         return 0;
+    }
+
+    @Override
+    public String getCorporativeEmail() {
+        return "software@bla.com";
     }
 }
 

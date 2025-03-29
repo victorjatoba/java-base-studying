@@ -1,9 +1,11 @@
+package class_vs_interface;
+
 /**
  * processPayment(double amount)
  * default printReceipt(double amount)
  * bool isValidAmount(double amount)
  */
-public interface PaymentProcessor {
+interface PaymentProcessor {
 
     void processPayment(double amount);
     default void printReceipt(double amount) {

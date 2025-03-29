@@ -1,3 +1,5 @@
+package class_vs_interface;
+
 public class PaymentDemo {
     public static void main(String[] args) {
         CreditCardProcessor card = new CreditCardProcessor();
