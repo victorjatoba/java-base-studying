@@ -1,7 +1,9 @@
-/**
- * Imagine that you have Person class with attributes name and age. Givem a list of Person, how would you use the Java Stream API to cerate a new list where each person's name is updated to "NewName" while keeping their age unchanged?
- */
+package stream_api;
 
+/**
+ * Imagine that you have Person class with attributes name and age. Givem a list of Person, how would you use the Java Stream API
+ * to create a list of Animal for each person.
+ */
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,12 +14,14 @@ public class PersonDemo {
             new Person("Karina", 30)
         );
 
-        List<Person> updatedPeople = people.stream()
-            .map(person -> new Person("Prof. " + person.name(), person.age()))
-            .collect(Collectors.toList());
+        List<Animal> animal = people.stream()
+            .map(p -> new Animal(p.name() + "' Pet", p.age()))
+            .toList();
 
-        updatedPeople.forEach(System.out::println);
+        people.forEach(System.out::println);
+        animal.forEach(System.out::println);
     }
 
     record Person(String name, int age) {}
+    record Animal(String name, int age) {}
 }
