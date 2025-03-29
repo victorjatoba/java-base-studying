@@ -1,12 +1,11 @@
 package stream_api;
 
+import java.util.List;
+
 /**
  * Imagine that you have Person class with attributes name and age. Givem a list of Person, how would you use the Java Stream API
  * to create a list of Animal for each person.
  */
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class PersonDemo {
     public static void main(String[] args) {
         List<Person> people = List.of(
