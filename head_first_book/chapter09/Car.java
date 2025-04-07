@@ -1,3 +1,5 @@
+package head_first_book.chapter09;
+
 public class Car {
     public String color;
     public int year;
